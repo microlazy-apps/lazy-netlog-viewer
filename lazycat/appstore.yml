@@ -1,0 +1,52 @@
+source: https://chromium.googlesource.com/catapult
+source_author: The Chromium Authors
+is_original: false
+keywords: chrome,chromium,netlog,network,debugging,devtools,polymer
+support_pc: true
+support_mobile: false
+
+screenshots:
+  pc:
+    - lazycat/screenshots/01-import.png
+    - lazycat/screenshots/02-events.png
+    - lazycat/screenshots/03-timeline.png
+  mobile: []
+
+description:
+  zh-CN: |
+    Chromium 官方维护的 Net Log Viewer 自托管版。把 Chrome 通过
+    chrome://net-export/ 导出的 NetLog JSON 拖进来即可可视化分析。
+
+    特性
+    - 浏览器端纯前端解析，数据不上传
+    - 完整还原 chrome://net-internals 的 Events / Timeline / DNS / HTTP cache /
+      Sockets / QUIC / SPDY / Alt-Svc / Proxy / Reporting 等标签页
+    - Source 过滤、时间线缩放、按事件类型筛选
+
+    适合：
+    - 排查 Chrome 网络疑难（DNS 失败、TLS 握手错误、连接复用问题等）
+    - 分析复杂代理/QUIC/SPDY 行为
+    - 移动端通过 chrome://net-export/ 导出后回到 PC 上分析
+
+    上游项目: https://chromium.googlesource.com/catapult/+/refs/heads/main/netlog_viewer/
+    官方部署: https://netlog-viewer.appspot.com/
+    本仓库（懒猫包装）: https://github.com/microlazy-apps/lazy-netlog-viewer
+  en: |
+    Self-hosted build of Chromium's official Net Log Viewer. Drop a NetLog
+    JSON file (exported via chrome://net-export/) into the Web UI and
+    visualize the entire network event log.
+
+    Features
+    - 100% client-side parsing — NetLog data never leaves your browser
+    - Full chrome://net-internals tab set: Events / Timeline / DNS / HTTP
+      cache / Sockets / QUIC / SPDY / Alt-Svc / Proxy / Reporting / Modules
+    - Source filtering, timeline zoom, event-type filtering
+
+    Useful for:
+    - Debugging Chrome network issues (DNS, TLS handshake, connection reuse)
+    - Investigating proxy / QUIC / SPDY behavior
+    - Analyzing mobile-exported NetLogs on a PC
+
+    Upstream: https://chromium.googlesource.com/catapult/+/refs/heads/main/netlog_viewer/
+    Official deploy: https://netlog-viewer.appspot.com/
+    This wrapper repo: https://github.com/microlazy-apps/lazy-netlog-viewer

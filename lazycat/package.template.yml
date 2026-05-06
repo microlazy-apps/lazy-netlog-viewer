@@ -1,0 +1,73 @@
+package: cloud.lazycat.app.netlog-viewer
+version: ${VERSION}
+name: Net Log Viewer
+description: 浏览器端可视化分析 Chrome NetLog（chrome://net-export/）
+author: The Chromium Authors
+license: BSD-3-Clause
+homepage: https://github.com/microlazy-apps/lazy-netlog-viewer
+locales:
+  zh-CN:
+    name: Net Log Viewer
+    description: 自托管 Chromium Net Log Viewer —— 在浏览器里分析 Chrome NetLog 文件
+    usage: |
+      ## 关于 Net Log Viewer
+
+      Chromium 官方维护的 NetLog 可视化工具。把 Chrome 通过
+      `chrome://net-export/` 导出的 NetLog JSON 拖进 Web UI，就能看到：
+
+      - **Events** —— 按 source 分组的所有网络事件时间线
+      - **Timeline** —— 网络活动的时间线视图
+      - **DNS** —— DNS 解析历史
+      - **HTTP cache** —— HTTP 缓存命中/未命中
+      - **Sockets** —— TCP/SSL 连接池
+      - **QUIC / SPDY / Alt-Svc** —— 协议层细节
+      - **Proxy / Reporting / Modules** 等
+
+      所有解析都在浏览器里完成，**NetLog 数据不会上传到任何服务器**。
+      本应用只是把 Chromium 官方静态站点搬到了你的懒猫上而已。
+
+      ## 使用
+
+      1. 在 Chrome 访问 `chrome://net-export/`，点 **Start Logging to Disk**
+      2. 复现网络问题（访问出错的页面、抓 TLS 握手失败 等）
+      3. 回到 `chrome://net-export/` 点 **Stop Logging**，得到 `.json` 文件
+      4. 打开 `https://netlog-viewer.{你的微服域名}`
+      5. 点 **Choose File** 选择刚才的 JSON
+
+      ## 上游
+
+      - 项目：https://chromium.googlesource.com/catapult/+/refs/heads/main/netlog_viewer/
+      - 官方部署：https://netlog-viewer.appspot.com/
+  en:
+    name: Net Log Viewer
+    description: Self-hosted Chromium Net Log Viewer — analyze Chrome NetLog files in your browser
+    usage: |
+      ## About Net Log Viewer
+
+      The official Chromium-maintained visualizer for NetLog files exported
+      by Chrome's `chrome://net-export/`. Drop a NetLog `.json` into the Web
+      UI and inspect:
+
+      - **Events** — every network event grouped by source
+      - **Timeline** — time-series view of network activity
+      - **DNS** — resolution history
+      - **HTTP cache** — hit / miss breakdown
+      - **Sockets** — TCP / SSL pools
+      - **QUIC / SPDY / Alt-Svc** — protocol-level detail
+      - **Proxy / Reporting / Modules** — and more
+
+      All parsing happens in your browser. **NetLog data is never uploaded
+      anywhere** — this app only serves the static frontend.
+
+      ## Usage
+
+      1. In Chrome go to `chrome://net-export/` and click **Start Logging to Disk**
+      2. Reproduce the network issue
+      3. Click **Stop Logging**, save the `.json`
+      4. Open `https://netlog-viewer.{your-box-domain}`
+      5. Click **Choose File** and pick the JSON
+
+      ## Upstream
+
+      - Source: https://chromium.googlesource.com/catapult/+/refs/heads/main/netlog_viewer/
+      - Official deploy: https://netlog-viewer.appspot.com/
