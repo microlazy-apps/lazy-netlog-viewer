@@ -9,7 +9,7 @@ screenshots:
   pc:
     - lazycat/screenshots/01-import.png
     - lazycat/screenshots/02-events.png
-    - lazycat/screenshots/03-timeline.png
+    - lazycat/screenshots/03-sockets.png
   mobile: []
 
 description:
