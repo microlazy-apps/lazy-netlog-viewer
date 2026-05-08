@@ -5,6 +5,11 @@ description: 浏览器端可视化分析 Chrome NetLog（chrome://net-export/）
 author: The Chromium Authors
 license: BSD-3-Clause
 homepage: https://github.com/microlazy-apps/lazy-netlog-viewer
+
+unsupported_platforms:
+  - ios
+  - android
+
 locales:
   zh-CN:
     name: Net Log Viewer
