@@ -12,6 +12,15 @@ chromium.googlesource.com on every image build.
 Build/publish/bootstrap logic is **not** in this repo — it lives in
 [microlazy-apps/lazycat-ci](https://github.com/microlazy-apps/lazycat-ci).
 
+## Lazycat appstore identifiers
+
+- **package id**: `cloud.lazycat.app.netlog-viewer`
+- **app_id**: `5329` (recorded 2026-05-08)
+- **subdomain**: `netlog-viewer` → `https://netlog-viewer.<box-domain>`
+- **bootstrap workflow**: when re-running `bootstrap-app.yml` to
+  resubmit a fix, pass `app_id=5329` so the workflow skips
+  `/app/create` (which would 500 on duplicate package).
+
 ## Layout
 
 ```
